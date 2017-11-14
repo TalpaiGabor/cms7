@@ -1,0 +1,494 @@
+@font-face {
+    font-family: 'Raleway Medium';
+    src: url(../fonts/Raleway/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: 'Raleway Light';
+    src: url(../fonts/Raleway/Raleway-Light.ttf);
+}
+    /**
+    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+    * http://cssreset.com
+    */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font-family: 'Open Sans', sans-serif; */
+    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    html{
+        width:100%;
+       
+    }
+    body {
+        line-height: 1;
+        /* font-family: 'Open Sans', sans-serif; */
+        width:100%;
+        position:relative;
+        margin:0;
+    }
+    .scroller{
+        overflow: auto;
+        padding: 5px;
+        height: 100%;
+    }
+    div#login{
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button#logout_button{
+        position: absolute;
+        top: 1%;
+        margin-left:85%;
+    }
+    h1{
+        font-size:400%;
+    }
+    h2{
+        font-size:200%;
+    }
+    h3{
+        
+        margin: 10px auto;
+    }
+    h4{
+        font-size:120%;
+        font-weight: 800;
+        font-family:"Trebuchet MS";
+        
+    }
+    ol, ul {
+    list-style: none;
+    }
+    blockquote, q {
+    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content: '';
+    content: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+	a, a:visited{
+		text-decoration:none;
+		color:inherit;
+	}
+	select{
+	padding:5px 10px;
+    background: url('icons/lenyilo_nyil.svg');
+    background-size: 14px;
+    background-repeat:no-repeat;
+    background-position: 95% 50%;
+    border:1px solid #999999;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    font-weight: bold;
+    cursor:pointer;
+     padding-right:30px;
+   
+    border-width: 1px;
+
+	}
+	select:active, select:focus{
+	  -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      outline:none;
+      
+
+	}
+  option:hover{
+    color:#a06f40;
+  }
+  
+  html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+  width:100%;
+  height:auto;
+  
+}
+body > div{
+	overflow-x:hidden;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+strong{
+	font-weight:bold;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-transition: color 0.2s, background 0.2s;
+  -moz-transition: color 0.2s, background 0.2s;
+  -o-transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+button > *{
+	display:inline-block;
+	vertical-align:middle;
+}
+input:not([type=checkbox]), textarea, button{
+	width:100%;
+	font-family:'Raleway Medium';
+	border:none;
+	padding:10px;
+	margin:5px 0;
+	box-sizing:border-box;
+	font-size:16px;
+	transition:all ease-in-out 0.2s;
+	cursor:pointer;
+	border-bottom:1px solid gray;
+}
+input:not([type=checkbox])[disabled=disabled], textarea[disabled=disabled], button[disabled=disabled]{
+	border:1px solid gray;
+	background:transparent;
+	color:gray;
+}
+input[type=submit], button{
+	border:0px;
+}
+button:hover{
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	transform:scale(1.1);
+}
+button > *{
+	display:inline-block;
+	vertical-align:middle;
+	line-height:16px;
+}
+textarea{
+	border:1px solid #999999;
+}
+input::-webkit-input-placeholder{
+	font-family:'Raleway Medium';
+	font-size:14px;
+}
+input::-ms-input-placeholder {
+	font-family:'Raleway Medium';
+	font-size:14px;
+}
+input::-moz-placeholder{
+	font-family:'Raleway Medium';
+	font-size:14px;
+}
+input[type=radio].custom-radio{
+  display:none;
+}
+input[type=radio].custom-radio + label:before{
+   content: "\f096";
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #fff;
+    font-size: 18px;
+    padding:5px;
+   
+}
+
+input[type=radio].custom-radio:checked + label:before{
+  content: "\f00c";
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #fff;
+    font-size: 18px;
+    padding:5px;
+}
+
+
+input[type=checkbox]{
+	appearance:none;
+	-webkit-appearance:none;
+	 -moz-appearance:none;
+ 	 -o-appearance:none;
+  opacity: 0;
+  width:30px;
+  height: 30px;
+  position:relative;
+}
+input[type="checkbox"] + label{
+  position: relative;
+  left:-34px;
+  top:3px;
+  z-index: 0;
+}
+input[type="checkbox"]::before, input[type="checkbox"] + label::before{
+	content: "\f00c";
+	display:inline-block;
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    font-size:20px;
+    text-decoration: inherit;
+    right:-30px;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    border:1px solid #aaaaaa;
+    color:#eeeeee;
+    text-align:center;
+}
+input[type=checkbox]:checked::before, input[type="checkbox"]:checked + label::before{
+	color:#444444;
+}
+
+span.switch{
+  position: relative;
+  width:60px;
+  height:30px;
+  display: inline-block;
+  vertical-align:middle;
+}
+span.switch input[type="checkbox"]{
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity: 0;
+  z-index:2;
+  top:0;
+  left:0;
+  margin:0px;
+}
+span.switch input[type="checkbox"] + label{
+	font-family:'Raleway Medium';
+	border:1px solid gray;
+	border-radius:15px;
+  display: inline-block;
+	width:60px;
+	height:30px;
+  position:absolute;
+  top:0;
+	line-height:40px;
+	-webkit-transition:all 0.2s ease-in-out;
+	-ms-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fcf7+0,f5f9f0+100;L+Green+3D */
+	background: #f9fcf7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f9fcf7 0%, #f5f9f0 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f9fcf7 0%,#f5f9f0 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f9fcf7 0%,#f5f9f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fcf7', endColorstr='#f5f9f0',GradientType=0 ); /* IE6-9 */
+	box-sizing:border-box;
+  
+}
+span.switch input[type="checkbox"] + label{
+	position:absolute;
+	left:0;
+	top:0;
+}
+span.switch input[type="checkbox"] + label::before{
+	font-family:'Raleway Medium';
+	content: "O";
+	display:inline-block;
+	position:absolute;
+    font-style: normal;
+    font-weight: normal;
+    font-size:20px;
+    text-decoration: inherit;
+    top:-1px;
+    right:calc(100% - 30px);
+    width:30px;
+    height:100%;
+    line-height:30px;
+    border:1px solid #aaaaaa;
+    border-radius:15px;
+    text-align:center;
+    
+	-webkit-transition:all 0.2s ease-in-out;
+	-ms-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+background: #f5f6f6; /* Old browsers */
+background: -moz-linear-gradient(top,  #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+
+    background-position:0%;
+}
+span.switch input[type=checkbox]:checked + label{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b7ea+0,009ec3+100;Blue+3D+%2315 */
+background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
+
+}
+span.switch input[type=checkbox]:checked + label::before{
+	content:'I';
+	right:-2px;
+}
