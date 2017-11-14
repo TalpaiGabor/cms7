@@ -1,0 +1,33 @@
+
+AddDefaultCharset utf-8 
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+	
+	#<FilesMatch "\.(jpg|jpeg|png|gif|swf|css|js)$">
+	#	Header set Cache-Control "max-age=604800, public"
+	#</FilesMatch>
+	
+	DirectoryIndex index.php
+	
+	RewriteBase /nubes/
+	
+	RewriteCond %{REQUEST_URI} !(.*)crm7/
+	RewriteRule ^(.*)$ /$1 [L]
+	
+		
+	RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|ico|txt|pdf|xml)$ [OR]
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d [OR]
+	RewriteCond %{REQUEST_FILENAME} -l
+	RewriteRule ^(.*)$ - [L]
+	
+	RewriteCond %{REQUEST_URI} ^.+$
+	
+	RewriteRule ^([a-z,A-Z,_,0-9]*)\/(?:page-([0-9]+)\/)?$ index.php?page=$2&form=$1 [L,QSA]
+	
+	RewriteRule ^(.*)$ - [L]
+	
+    ErrorDocument 404 /404.php
+
+</IfModule>
